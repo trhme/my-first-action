@@ -3,7 +3,7 @@ name: Workflow with Artifact
 on: [push]
 
 env:
-  ARTIFACT_NAME: README.md
+  ARTIFACT_NAME: .github
 
 jobs:
   Job1:
