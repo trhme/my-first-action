@@ -1,0 +1,17 @@
+name: Workflow with Artifact
+
+on: [push]
+
+env:
+  ARTIFACT_NAME: "Tom's First Artifact"
+
+jobs:
+  Job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code step
+      uses: actions/checkout@v3
+    - name: Ls
+      run: ls -lrt
+    - name: Upload artifact step
+      uses: actions/upload-artifact@v4.3.6
