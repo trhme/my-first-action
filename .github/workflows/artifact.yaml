@@ -12,6 +12,8 @@ jobs:
     - name: Check out code step
       uses: actions/checkout@v3
     - name: Ls
-      run: ls -lrt
+      run: |
+        pwd
+        ls -alrt
     - name: Upload artifact step
       uses: actions/upload-artifact@v4.3.6
