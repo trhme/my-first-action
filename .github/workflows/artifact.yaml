@@ -3,7 +3,7 @@ name: Workflow with Artifact
 on: [push]
 
 env:
-  ARTIFACT_NAME: "Tom's First Artifact"
+  ARTIFACT_NAME: README.md
 
 jobs:
   Job1:
@@ -17,3 +17,6 @@ jobs:
         ls -alrt
     - name: Upload artifact step
       uses: actions/upload-artifact@v4.3.6
+      with:
+        name: ${{ env.ARTIFACT_NAME }}
+        path: ./${{ env.ARTIFACT_NAME }}
